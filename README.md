@@ -24,7 +24,7 @@ A simple and interactive weather forecasting app that allows users to search for
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/weather-app.git
+git clone https://github.com/sushil-40/weather-app.git
 cd weather-app
 
 2. Open index.html in your browser
@@ -38,7 +38,8 @@ weather-app/
 ├── index.html
 ├── css|
         |__style.css
-├── script.js
+├── JS|
+        |__script.js
 ├── README.md
 ├── .gitignore
 🌐 API Reference
