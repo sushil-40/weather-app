@@ -30,7 +30,7 @@ const fetchWeather = async (url) => {
     const humidity = data.current.humidity;
     console.log("humidity = ", humidity);
     const windSpeed = data.current.wind_kph;
-    console.log("wind speed = ", humidity);
+    console.log("wind speed = ", windSpeed);
 
     const weatherCondition = data.current.condition.text;
     console.log("weather conditions = ", weatherCondition);
