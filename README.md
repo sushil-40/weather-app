@@ -1,4 +1,5 @@
 # weather-app
+
 # 🌤️ Weather App
 
 A simple and interactive weather forecasting app that allows users to search for any city and view real-time weather information.
@@ -7,7 +8,7 @@ A simple and interactive weather forecasting app that allows users to search for
 
 - 🔎 Search for current weather by city name
 - 🌡️ Displays temperature, humidity, wind speed, and weather conditions
-- 📍 Option to use geolocation for weather at your current location *(optional enhancement)*
+- 📍 Option to use geolocation for weather at your current location _(optional enhancement)_
 - ⚠️ Handles invalid or misspelled city names gracefully
 - 📱 Responsive design for both desktop and mobile
 
@@ -23,7 +24,7 @@ A simple and interactive weather forecasting app that allows users to search for
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/weather-app.git
+git clone https://github.com/sushil-40/weather-app.git
 cd weather-app
 
 2. Open index.html in your browser
@@ -35,8 +36,10 @@ Copy
 Edit
 weather-app/
 ├── index.html
-├── style.css
-├── script.js
+├── css|
+        |__style.css
+├── JS|
+        |__script.js
 ├── README.md
 ├── .gitignore
 🌐 API Reference
@@ -53,3 +56,4 @@ HARWIN KAUR
 
 📄 License
 This project is for educational purposes only. Feel free to modify and build upon it.
+```
