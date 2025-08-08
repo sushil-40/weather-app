@@ -34,6 +34,34 @@ const fetchWeather = async (url) => {
 
     const weatherCondition = data.current.condition.text;
     console.log("weather conditions = ", weatherCondition);
+
+
+    //DOM
+    const cityNameEl = document.querySelector(".city-name");
+    cityNameEl.textContent = `City: ${city}`;
+
+    const countryEl = document.querySelector(".country");
+    countryEl.textContent = `Country: ${country}`;
+
+    const regionEl = document.querySelector(".region");
+    regionEl.textContent = `Region: ${region}`;
+
+    const timeZoneEl = document.querySelector(".timeZone");
+    timeZoneEl.textContent = `Time Zone: ${timeZone}`;
+
+    const localTimeEl = document.querySelector(".localTime");
+    localTimeEl.textContent = `Local Time: ${localTime}`;
+
+    const temperatureEl = document.querySelector(".temperature");
+    temperatureEl.textContent = `Temperature: ${temperature}`;
+
+    const humidityEl = document.querySelector(".humidity");
+    humidityEl.textContent = `Humidity: ${humidity}`;
+
+    const windspeedEl = document.querySelector(".wind-speed");
+    windspeedEl.textContent = `Wind Speed: ${windSpeed}`;
+
+
     //      🔎 Search for current weather by city name
     // - 🌡️ Displays temperature, humidity, wind speed, and weather conditions
     // - 📍 Option to use geolocation for weather at your current location _(optional enhancement)_
