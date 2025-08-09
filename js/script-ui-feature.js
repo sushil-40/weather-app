@@ -1,6 +1,7 @@
 const baseUrl = "http://api.weatherapi.com/v1";
 const API_KEY = "3939fa7cebfc4660827102611252107";
 const place = "Brisbane";
+const apiEP = baseUrl + `/current.json?key=${API_KEY}&q=${place}`;
 
 const fetchWeather = async (url) => {
   try {
@@ -11,7 +12,6 @@ const fetchWeather = async (url) => {
 
     const data = await response.json();
     console.log(data);
-
     const country = data.location.country;
     console.log("country = ", country);
     const city = data.location.name;
@@ -34,6 +34,7 @@ const fetchWeather = async (url) => {
 
     const weatherCondition = data.current.condition.text;
     console.log("weather conditions = ", weatherCondition);
+
 
     //DOM
     const cityNameEl = document.querySelector(".city-name");
@@ -60,6 +61,7 @@ const fetchWeather = async (url) => {
     const windspeedEl = document.querySelector(".wind-speed");
     windspeedEl.textContent = `Wind Speed: ${windSpeed}`;
 
+
     //      🔎 Search for current weather by city name
     // - 🌡️ Displays temperature, humidity, wind speed, and weather conditions
     // - 📍 Option to use geolocation for weather at your current location _(optional enhancement)_
@@ -69,12 +71,4 @@ const fetchWeather = async (url) => {
     console.log(error);
   }
 };
-
-fetchWeather(`${baseUrl}/current.json?key=${API_KEY}&q=${place}`);
-document.getElementById("btnSearch").addEventListener("click", function () {
-  //get place name [city name from user input]
-  const searchInput = document.getElementById("placeName").value.trim();
-  const searchedCity = searchInput || place;
-  const apiEP = `${baseUrl}/current.json?key=${API_KEY}&q=${searchedCity}`;
-  fetchWeather(apiEP);
-});
+fetchWeather(apiEP);
