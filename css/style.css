@@ -1,8 +1,138 @@
-.weather-app {
+/* .weather-app {
   min-height: 100vh;
   background-color: rgba(209, 200, 200, 0.589);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+} */
+/* Reset some default spacing */
+/* Reset & font */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
+
+/* Body gradient */
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+  color: #fff;
+}
+
+/* Weather app card */
+.weather-app {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  border-radius: 25px;
+  padding: 30px 40px;
+  width: 360px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Heading */
+.weather-app h1 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+/* Search container */
+.search {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+/* Search input */
+.search input {
+  flex: 1;
+  padding: 12px 16px;
+  border: none;
+  border-radius: 25px;
+  outline: none;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+.search input::placeholder {
+  color: #f0f0f0aa;
+}
+
+.search input:focus {
+  background: rgba(255, 255, 255, 0.35);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Search button */
+/* Search container */
+.search {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 25px;
+  justify-content: center;
+  flex-wrap: wrap; /* allows wrapping on small screens */
+}
+
+/* Search input */
+.search input {
+  flex: 1 1 200px; /* grow, shrink, base width */
+  padding: 12px 16px;
+  border: none;
+  border-radius: 25px;
+  outline: none;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  transition: background 0.3s, box-shadow 0.3s;
+  min-width: 0; /* prevents overflow in flexbox */
+}
+
+/* Search button */
+.search button {
+  flex: 0 0 auto; /* do not grow/shrink */
+  padding: 12px 20px;
+  background: linear-gradient(45deg, #ff9f43, #ff6b6b);
+  border: none;
+  border-radius: 25px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.3s;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  white-space: nowrap; /* keeps text on one line */
+}
+
+
+/* Weather info container */
+.weather-info {
+  text-align: left;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.weather-info h2,
+.weather-info h3,
+.weather-info p {
+  margin: 6px 0;
+}
+
+/* Weather icon */
+.weather-info img {
+  display: block;
+  margin: 10px auto;
+  width: 80px;
+  height: 80px;
+}
+
