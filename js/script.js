@@ -3,6 +3,11 @@ const API_KEY = "3939fa7cebfc4660827102611252107";
 const place = "Brisbane";
 const apiEP = baseUrl + `/current.json?key=${API_KEY}&q=${place}`;
 
+const serachButton = document.getElementById("searchButton");
+const searchInput = document.getElementById("searchInput");
+
+
+
 const fetchWeather = async (url) => {
   try {
     const response = await fetch(url);
