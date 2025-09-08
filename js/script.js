@@ -54,7 +54,8 @@ const fetchWeather = async (url) => {
           "url('assets/weather-conditions/cloudy.jpg')";
       } else if (
         weatherCondition.includes("Rain") ||
-        weatherCondition.includes("Drizzle")
+        weatherCondition.includes("Drizzle") ||
+        weatherCondition.includes("Patchy rain nearby")
       ) {
         document.body.style.backgroundImage =
           "url('assets/weather-conditions/rainy.jpg')";
