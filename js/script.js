@@ -5,8 +5,6 @@ const place = "Brisbane";
 const serachButton = document.getElementById("searchButton");
 const searchInput = document.getElementById("searchInput");
 
-
-
 const fetchWeather = async (url) => {
   try {
     const response = await fetch(url);
@@ -39,6 +37,51 @@ const fetchWeather = async (url) => {
 
     const weatherCondition = data.current.condition.text;
     console.log("weather conditions = ", weatherCondition);
+
+    // Using includes to catch variations like "Sunny" or "Clear"
+    if (weatherCondition) {
+      if (
+        weatherCondition.includes("Clear") ||
+        weatherCondition.includes("Sunny")
+      ) {
+        document.body.style.backgroundImage =
+          "url('assets/weather-conditions/clear.jpg')";
+      } else if (
+        weatherCondition.includes("Partly cloudy") ||
+        weatherCondition.includes("Overcast")
+      ) {
+        document.body.style.backgroundImage =
+          "url('assets/weather-conditions/cloudy.jpg')";
+      } else if (
+        weatherCondition.includes("Rain") ||
+        weatherCondition.includes("Drizzle")
+      ) {
+        document.body.style.backgroundImage =
+          "url('assets/weather-conditions/rainy.jpg')";
+      } else if (
+        weatherCondition.includes("Snow") ||
+        weatherCondition.includes("Freezing")
+      ) {
+        document.body.style.backgroundImage =
+          "url('assets/weather-conditions/snow.jpg')";
+      } else if (
+        weatherCondition.includes("Thunder") ||
+        weatherCondition.includes("Storm")
+      ) {
+        document.body.style.backgroundImage =
+          "url('assets/weather-conditions/storm.jpg')";
+      } else if (weatherCondition.includes("Wind")) {
+        document.body.style.backgroundImage =
+          "url('assets/weather-conditions/windy.jpg')";
+      } else {
+        // Default background
+        document.body.style.backgroundImage =
+          "url('assets/weather-conditions/default.jpg')";
+      }
+
+      document.body.style.backgroundSize = "cover";
+      document.body.style.backgroundPosition = "center";
+    }
 
     //DOM
     const cityNameEl = document.querySelector(".city-name");
