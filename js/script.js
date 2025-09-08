@@ -108,6 +108,9 @@ const fetchWeather = async (url) => {
     const windspeedEl = document.querySelector(".wind-speed");
     windspeedEl.textContent = `Wind Speed: ${windSpeed}`;
 
+    const weatherConditonEl = document.querySelector(".weatherCondition");
+    windspeedEl.textContent = `Weather Condition: ${weatherCondition}`;
+
     //      🔎 Search for current weather by city name
     // - 🌡️ Displays temperature, humidity, wind speed, and weather conditions
     // - 📍 Option to use geolocation for weather at your current location _(optional enhancement)_
