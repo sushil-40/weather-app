@@ -40,12 +40,12 @@ const fetchWeather = async (url) => {
 
     // Using includes to catch variations like "Sunny" or "Clear"
     if (weatherCondition) {
-      if (
-        weatherCondition.includes("Clear") ||
-        weatherCondition.includes("Sunny")
-      ) {
+      if (weatherCondition.includes("Clear")) {
         document.body.style.backgroundImage =
           "url('assets/weather-conditions/clear.jpg')";
+      } else if (weatherCondition.includes("Sunny")) {
+        document.body.style.backgroundImage =
+          "url('assets/weather-conditions/sunny.jpg')";
       } else if (
         weatherCondition.includes("Partly cloudy") ||
         weatherCondition.includes("Overcast")
